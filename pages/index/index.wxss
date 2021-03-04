@@ -1,0 +1,47 @@
+.index_swiper swiper {
+    width: 100%;
+    height: 340rpx;
+  }
+  .index_swiper swiper image {
+    width: 100%;
+  }
+.list image {
+
+    width: 20%;
+}
+.good{
+    overflow: hidden;
+}
+.good_item image{
+    width: 100%;
+}
+.good_item {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.good_item title{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.good_item .desc{
+    color:black;
+}
+.good_item .price{
+    color: red;
+    margin: 10px 0;
+}
+.good_item .price .new{
+    font-size: 18px;
+}
+.good_item .price .old{
+    color: rosybrown;
+    text-decoration: line-through;
+}
+.good_item .toPay{
+    color: blanchedalmond;
+    background-color: red;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px 0;
+}

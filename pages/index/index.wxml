@@ -1,0 +1,44 @@
+<view class="index_swiper">
+    <!-- 1 swiper标签存在默认宽度和高度 100% * 150px
+        2 image标签也存在默认的高度和宽度 320px*240px
+        3 设计图片和轮播图
+          1 先看原图的宽高 750*340
+          2 让图片的高度自适应 宽度等于100%
+          3 让swiper标签的高度和图片的高度等比例发生变化
+        4 图片标签 
+           mode属性渲染
+            widthFix 让图片的标签宽高 和 图片内容的宽高都等比例发生变化 -->
+    <swiper autoplay indicator-dots circular="{{true}}">
+        <swiper-item wx:for="{{swiperList}}" wx:key="*this" wx:for-item="swip" wx:for-index="id" class="" item-id="">
+            <image class="" src="{{swip}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="list" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{lists}}" wx:key="*this">
+        <image class="" src="{{item}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+    </block>
+</view>
+<!-- 商品 -->
+<view class="select" wx:for="{{selectList}}">
+    <image src="{{item.titleImg}}" mode="widthFix"></image>
+    <view class="goods" >
+        <view class="good_item"
+                    wx:for="{{item.goodList}}"
+                    wx:for-item="good"
+                    wx:for-index="id"
+                    wx:key="id">
+            <image src="{{good.image}}" mode="widthFix"></image>
+            <view class="title">{{good.title}}</view>
+            <view class="desc">{{good.desc}}</view>
+            <view class="price">
+                <text class="new">￥{{good.price}}</text>
+                <text>起</text>
+                <text class="old">{{good.oldPrice}}</text>
+            </view>
+            <view class="toPay">立即购买</view>
+        </view>
+    </view>
+    <view class="other" hover-class="none" hover-stop-propagation="false">更多小米商品-></view>
+</view>
+<!-- 商品结束 -->
