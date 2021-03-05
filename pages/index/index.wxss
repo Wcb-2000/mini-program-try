@@ -1,13 +1,24 @@
 .index_swiper swiper {
     width: 100%;
-    height: 340rpx;
+    height: 450rpx;
+    border-radius: 10rpx;
+    margin-bottom: 5rpx;
   }
   .index_swiper swiper image {
     width: 100%;
+    height: 50%;
+  }
+  .list{
+    justify-items: center;
+    align-items: center;
+      margin: 5rpx 5rpx;
   }
 .list image {
-
-    width: 20%;
+    float: left;
+   
+    padding: 5rpx;
+    border-radius: 10rpx;
+    width: 23.7%;
 }
 .good{
     overflow: hidden;

@@ -5,22 +5,16 @@ Page({
    */
   data: {
     swiperList: [
-      "../../images/swiper1.jpg",
-      "../../images/swiper2.jpg",
-      "../../images/swiper3.jpg"
+      "../../images/my/swiper1.jpg",
+      "../../images/my/swiper2.jpg",
+      "../../images/my/swiper3.jpg"
     ],
     imgHei: "",
     lists: [
-      "../../images/list1.png",
-      "../../images/list2.png",
-      "../../images/list3.png",
-      "../../images/list4.png",
-      "../../images/list5.png",
-      "../../images/list6.png",
-      "../../images/list7.png",
-      "../../images/list8.png",
-      "../../images/list9.png",
-      "../../images/list10.png"
+      "../../images/my/list1.png",
+      "../../images/my/list2.png",
+      "../../images/my/list3.png",
+      "../../images/my/list4.png",
     ],
 
     selectList: [
