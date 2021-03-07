@@ -1,21 +1,21 @@
 .userInfo{
   width: 100%;
-  height: 200px;
+  height: 350rpx;
   background-color: #ff6422;
   color: #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .userInfo .userurl{
-  width: 100px;
-  height: 100px;
+  width: 200rpx;
+  height: 200rpx;
   border-radius: 50px;
-  margin: 10px;
+  margin: 30rpx;
   float: left;
 }
 .userInfo .nickname{
-  line-height: 120px;
-  margin-left: 20px;
+  line-height: 220rpx;
+  margin-left: 10rpx;
   float: left;
 }
 .userInfo .code{

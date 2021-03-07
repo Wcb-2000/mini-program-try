@@ -14,20 +14,18 @@
         </swiper-item>
     </swiper>
 </view>
-<view class="list" hover-class="none" hover-stop-propagation="false">
-    <block wx:for="{{lists}}" wx:key="*this">
-        <image class="" src="{{item}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
-    </block>
+<view class="list" hover-class="none">
+    <view class="list1">
+        <block wx:for="{{lists}}" wx:key="*this">
+            <image class="list2" src="{{item}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </block>
+    </view>
 </view>
 <!-- 商品 -->
 <view class="select" wx:for="{{selectList}}">
     <image src="{{item.titleImg}}" mode="widthFix"></image>
-    <view class="goods" >
-        <view class="good_item"
-                    wx:for="{{item.goodList}}"
-                    wx:for-item="good"
-                    wx:for-index="id"
-                    wx:key="id">
+    <view class="goods">
+        <view class="good_item" wx:for="{{item.goodList}}" wx:for-item="good" wx:for-index="id" wx:key="id">
             <image src="{{good.image}}" mode="widthFix"></image>
             <view class="title">{{good.title}}</view>
             <view class="desc">{{good.desc}}</view>
