@@ -14,7 +14,9 @@ Page({
     var nickName = e.detail.userInfo.nickName
     var userUrl = e.detail.userInfo.avatarUrl
     this.setData({
-      canIUse:false
+      canIUse:false,
+      userUrl:userUrl,
+      nickName:nickName
     })
   },
   /**
