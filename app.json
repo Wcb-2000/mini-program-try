@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/collect/index",
+    "pages/detail/index",
     "pages/request/index",
     "pages/category/index",
     "pages/cart/index",

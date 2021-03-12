@@ -1,2 +1,20 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 购物车中有数据 -->
+<view class="cart" wx:if="{{isData}}">
+  <view>
+    <view class="carts">
+    <checkbox></checkbox>
+    <image src="../../images/select1.jpg" mode="widthFix"></image>
+  </view>
+</view>
+</view>
+
+
+<!-- 购物车中有数据end -->
+
+<!-- 购物车为空 -->
+<view class="null" wx:else>
+  <image src="../../images/shoppingCar.png" mode="widthFix"></image>
+  <view>购物车还是空的</view>
+  <view class="toIndex" bindtap="toIndex">到首页逛逛</view>
+</view>
+<!-- 购物车为空end -->

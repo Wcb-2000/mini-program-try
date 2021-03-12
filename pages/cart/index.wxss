@@ -1,1 +1,29 @@
-/* pages/cart/index.wxss */
+.null{
+  text-align: center;
+  font-size: 48rpx;
+}
+.null image{
+  width: 50%;
+  margin: 60rpx;
+}
+.null .toIndex{
+  color: #fff;
+  margin: 50rpx auto;
+  background-color: #eb4450;
+  width: 70%;
+  padding: 20rpx 0;
+}
+
+.cart {
+}
+.cart .carts checkbox{
+  vertical-align: middle;
+}
+.cart .carts{
+  margin: 10rpx 0;
+  border: 5px;
+ border-bottom-color: black;
+}
+.cart .carts image{
+  width: 30%;
+}

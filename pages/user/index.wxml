@@ -1,7 +1,10 @@
+<view class="btn" wx:if="{{canIUse}}" >
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>
 <!-- 用户信息 -->
-<view class="userInfo">
-  <image class="userurl" src="../../images/select1.jpg"></image>
-  <view class="nickname">昵称</view>
+<view class="userInfo" wx:else>
+  <image class="userurl" src="{{userUrl}}"></image>
+  <view class="nickname">{{nickName}}</view>
   <image class="code" src="../../images/erweima.png" mode="widthFix"></image>
 </view>
 <!-- 用户信息 end -->
@@ -38,3 +41,8 @@
   </view>
 </view>
 <!-- 我的服务 end -->
+<!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+<!-- 需要使用 button 来授权登录 -->
+

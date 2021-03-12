@@ -16,7 +16,7 @@ Page({
       "../../images/my/list3.png",
       "../../images/my/list4.png",
     ],
-
+    //定义商品数据
     selectList: [
       {
         text: "更多小米手机产品",
@@ -29,7 +29,7 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 0
+            num: 1
           },
           {
             id: 2,
@@ -47,7 +47,7 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 2
+            num: 1
           },
           {
             id: 4,
@@ -56,7 +56,7 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 3
+            num: 1
           },
           {
             id: 5,
@@ -65,7 +65,7 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 4
+            num: 1
           },
           {
             id: 6,
@@ -74,17 +74,51 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 5
+            num: 1
           }
         ]
       }
     ]
   },
-
+  //点击跳转详情页
+  toDetails:function(event){
+    //获取当前数据下标值
+    var id = event.target.dataset.id
+    //获取当前商品数组
+    var goodList = this.data.selectList[0].goodList
+    //1 获取当前商品数据，显示到详情页
+    var good = goodList[id]
+    //修改数据缓存 添加到缓存数据中
+    wx.setStorageSync('detailList', [good])
+    //2 跳转到详情页
+    wx.navigateTo({
+      url: '/pages/detail/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //同步版本
+// wx.setStorageSync      修改缓存数据（有则修改、无则添加）
+    // wx.setStorageSync('list', 111111)
+// wx.removeStorageSync   删除缓存数据
+   // wx.removeStorageSync('list')
+// wx.getStorageInfoSync  获取缓存数据信息
+    // var info = wx.getStorageInfoSync()
+    // console.log(info)
+// wx.getStorageSync      获取缓存数据
+//  var data = wx.getStorageSync('list')
+//  console.log(data)
+// wx.clearStorageSync    清空缓存数据
+
+// 异步版本
+// wx.setStorage 
+// wx.removeStorage
+// wx.getStorageInfo
+// wx.getStorage
+// wx.clearStorage
+
     // imgH:function(event){
     //   var imgWid = event.detail.width
     //   var imgHei = event.detail.height

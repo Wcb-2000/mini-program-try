@@ -1,0 +1,35 @@
+<view class="goodItem" wx:for="{{detailList}}" wx:key="*this">
+    <image src="{{item.image}}" mode="widthFix"></image>
+    <view class="title">{{item.title}}</view>
+    <view class="desc">{{item.desc}}</view>
+    <view class="price">
+        <text class="new">￥{{item.price}}</text>
+        <text>起</text>
+        <text class="old">{{item.oldPrice}}</text>
+    </view>
+</view>
+<!-- 底部 -->
+<view class="down">
+    <view class="left">
+        <view>
+            <image src="../../images/index.png" mode="widthFix" bindtap="toIndex"></image>
+            <view class="text">首页</view>
+        </view>
+        <view>
+            <image src="../../images/gouwuche.png" mode="widthFix" bindtap="toCart"></image>
+            <view class="text">购物车</view>
+            <!-- 当商品数量为0时 右上角数量隐藏 -->
+            <view class="num" wx:if="{{totalNum !=0}}">{{totalNum}}</view>
+        </view>
+        <view>
+            <image src="../../images/favorite.png" mode="widthFix" bindtap="collect"></image>
+            <view class="text">收藏</view>
+        </view>
+    </view>
+    <view class="right">
+        <view class="addCar" bindtap="addCart">加入购物车</view>
+        <view class="toPay" bindtap="topay">立即购买</view>
+    </view>
+
+</view>
+<!-- 底部end -->

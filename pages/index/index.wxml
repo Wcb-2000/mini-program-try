@@ -34,9 +34,10 @@
                 <text>起</text>
                 <text class="old">{{good.oldPrice}}</text>
             </view>
-            <view class="toPay">立即购买</view>
+            <view class="toPay" bindtap="toDetails" data-id="{{id}}">立即购买</view>
         </view>
     </view>
     <view class="other" hover-class="none" hover-stop-propagation="false">更多小米商品-></view>
+    
 </view>
 <!-- 商品结束 -->
