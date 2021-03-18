@@ -1,29 +1,34 @@
 <!-- 购物车中有数据 -->
 <view class="cart" wx:if="{{isData}}">
-  <!-- 复选框 -->
-  <view class="check_a">
-    <checkbox class="check"></checkbox>
-  </view>
-  <!-- 相片 -->
-  <view class="img">
-    <image src="../../images/select1.jpg" mode="widthFix"></image>
-  </view>
-  <!-- 内容 -->
-  <view class="content">
-    <view class="title">小米10</view>
-    <view class="price">￥4999</view>
-    <view class="action_btn">
-      <button class="btn_1">-</button>
-      <input class="sum" name="input" value="1"></input>
-      <button class="btn_1">+</button>
+  <view class="goods">
+    <view class="goodItem" wx:for="{{cartList}}" wx:key="*this">
+      <checkbox-group bindchange="change" data-index="{{index}}">
+        <checkbox checked="{{item.check}}" color="#ff6422"
+        value="选中" ></checkbox>
+      </checkbox-group>
+      <image src="{{item.image}}" mode="widthFix"></image>
+      <view class="middle">
+        <view class="title">{{item.title}}</view>
+        <view class="price">￥{{item.price}}</view>
+        <view class="number">
+          <view class="redice" bindtap="reduceNum" data-index="{{index}}">-</view>
+          <view class="num">{{item.num}}</view>
+          <view class="add" bindtap="addNum" data-index="{{index}}">+</view>
+        </view>
+      </view>
+      <view class="delect">
+        <image src="../../images/shanchu.png" mode="widthFix"></image>
+      </view>
     </view>
   </view>
-  <!-- 删除 -->
-  <view class="shanchu">
-    <image src="../../images/shanchu.png" mode="widthFix" >
-    </image>
+  
+  <view class="down">
+    <view class="left">总价:<text>￥0</text></view>
+    <view class="right">结算:</view>
   </view>
 </view>
+
+
 <!-- 购物车中有数据end -->
 <!-- 购物车为空 -->
 <view class="null" wx:else>

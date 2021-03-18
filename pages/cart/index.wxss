@@ -1,93 +1,103 @@
-.null{
+page{
+  background-color: #f5f5f5;
+}
+.goods{
+  margin-bottom: 50px;
+}
+/* 购物车有数据 */
+.goodItem{
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  border-bottom:1px solid #878787
+}
+.goodItem checkbox-group{
+  float: left;
+  line-height: 100px;
+  margin-left: 5px;
+}
+.goodItem>image{
+  width: 100px;
+  float: left;
+  margin: 8px 0;
+ 
+}
+.goodItem .middle{
+  margin: 5px 0;
+  float: left;
+}
+.goodItem .middle>view{
+height: 29px;
+}
+.goodItem .middle .price{
+  color:red;
+}
+.goodItem .middle .number{
+  position: relative;
+}
+.goodItem .middle .number>view{
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border:1px solid #878787;
+  text-align:center;
+  line-height: 20px;
+}
+.goodItem .middle .number .num{
+  width: 40px;
+  left: 20px;
+}
+.goodItem .middle .number .add{
+  width: 20px;
+  left:60px;
+}
+.goodItem .delect{
+  float: right;
+  margin-top:45px;
+}
+.goodItem .delect image{
+  width: 40px;
+}
+
+/* 结算 */
+.down{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+}
+.down .left{
+  float: left;
+  width: 40%;
+  
+}
+.down .right{
+  float: right;
+  width: 100px;
+  text-align: center;
+  color:#fff;
+  background-color: red;
+}
+
+/* 购物车为空 */
+.null {
   text-align: center;
   font-size: 48rpx;
 }
-.null image{
+
+.null image {
   width: 50%;
   margin: 60rpx;
 }
-.null .toIndex{
+
+.null .toIndex {
   color: #fff;
   margin: 50rpx auto;
   background-color: #eb4450;
   width: 70%;
   padding: 20rpx 0;
-}
-
-.cart{
-  display: flex;
-  width: 100%;
-  height: 190rpx;
-  border-bottom: 1px solid black;
-  margin: 5rpx 0;
-}
-.cart .check_a{
-  width: auto;
-  height: 100%;
-  margin: 0 2px;
- 
-}
-.cart .check_a .check{
-  display: flex;
-  height: 100%;
-}
-.cart .img{
-  float: left;
-  width: 30%;
-  
-}
-.cart .img image{
-  width: 100%;
-}
-.cart .content{
-  width: auto;
- padding: auto;
-}
-.cart .content .title{
-padding: 5rpx 5rpx;
-}
-.cart .content .action_btn{
-  display: flex;
-  right:0px;
-  top:0px;
-  text-align:right;
-  border:1px solid #D9D9D9;
-  border-radius:2px;
-  outline-color: black;
-}
-.cart .content .price{
-  font-size: 40rpx;
-  color: red;
-}
-.cart .content .action_btn .sum{
-    float:left;
-    width:32px;
-    height:24px;
-    text-align:center;
-    font-size:12px;
-    line-height:24px;
-    background-color: #fbfbfb;
-    border-left:1px solid #D9D9D9;
-    border-right:1px solid #D9D9D9;
-    min-height:24px;
-}
-.cart .content .btn_1{
-  float:left;
-  width:24px;
-  height:24px;
-  line-height:24px;
-  border-radius:0px;
-  font-size:18px;
-  padding:0px;
-  background-color: #F7F6F6;
-}
-.cart .shanchu{
-  margin-left: 70px;
-  align-self: flex-end;
-  width: 10%;
-
-  
-}
-.cart .shanchu image{
-  width: 100%;
 }

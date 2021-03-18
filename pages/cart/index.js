@@ -6,8 +6,72 @@ Page({
    */
   data: {
     //判断购物车中是否有数据
-    isData:false,
+    isData: false,
+    cartList: []
   },
+  //商品选中点击事件
+  change: function (event) {
+    //获取点击商品的下标值
+    var index = event.target.dataset.index
+    console.log(event)
+    //获取购物车的缓存数据
+    var cartList = wx.getStorageSync('cartList')
+    //获取当前点击后的复选框状态 0-取消选中 1-选中
+    var state = event.detail.value.length
+    if (state == 0) {
+      cartList[index].check = false
+    } else {
+      cartList[index].check = true
+    }
+    //修改缓存数据
+    wx.setStorageSync('cartList', cartList)
+  },
+
+  //商品数量减少
+  reduceNum: function (event) {
+    //获取点击商品的下标值
+    var index = event.target.dataset.index
+    //获取购物车的缓存数据
+    var cartList = wx.getStorageSync('cartList')
+    //获取当前点击商品数量
+    var num = cartList[index].num
+    // console.log(num)
+    // 判断最少数量
+    if (num > 1) {
+      num--
+    }
+    //修改购物车变量数据
+    cartList[index].num = num
+    // console.log(cartList)
+    //修改缓存数据
+    wx.setStorageSync('cartList', cartList)
+    //修改data数据，渲染到页面上
+    this.setData({
+      cartList: cartList
+    })
+  },
+
+  //商品数量增加
+  addNum: function (event) {
+    //获取点击商品的下标值
+    var index = event.target.dataset.index
+    //获取购物车的缓存数据
+    var cartList = wx.getStorageSync('cartList')
+    //获取当前点击商品数量
+    var num = cartList[index].num
+    num++
+     //修改购物车变量数据
+     cartList[index].num = num
+     // console.log(cartList)
+     //修改缓存数据
+     wx.setStorageSync('cartList', cartList)
+     //修改data数据，渲染到页面上
+     this.setData({
+       cartList: cartList
+     })
+  },
+
+  //到小米商城点击事件
   toIndex: function () {
     wx.switchTab({
       url: '/pages/index/index',
@@ -36,11 +100,12 @@ Page({
     //定义缓存状态
     var isData = false
     //判断购物车是否有数据
-    if(cartList.length!=0){
-      isData= true
+    if (cartList.length != 0) {
+      isData = true
     }
     this.setData({
-      isData:isData
+      isData: isData,
+      cartList: cartList
     })
   },
 
