@@ -111,6 +111,11 @@ Page({
 
   //结算总价
   price:function (event) {
+    //console.log('￥4999'*5)  输出nan  字符串不能乘数字
+    //console.log('￥4999'+5)  输出￥49995  字符串拼接
+    //console.log(9*5)  输出45  字符串不能乘数字
+    //console.log('￥4999'+'￥5')  输出￥4999￥5  字符串拼接
+
     //获取购物车的缓存数据
     var cartList = wx.getStorageSync('cartList')
     var totalPrice = 0
