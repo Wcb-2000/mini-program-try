@@ -3,8 +3,7 @@
   <view class="goods">
     <view class="goodItem" wx:for="{{cartList}}" wx:key="*this">
       <checkbox-group bindchange="change" data-index="{{index}}">
-        <checkbox checked="{{item.check}}" color="#ff6422"
-        value="选中" ></checkbox>
+        <checkbox checked="{{item.check}}" color="#ff6422" value="选中"></checkbox>
       </checkbox-group>
       <image src="{{item.image}}" mode="widthFix"></image>
       <view class="middle">
@@ -17,11 +16,11 @@
         </view>
       </view>
       <view class="delect">
-        <image src="../../images/shanchu.png" mode="widthFix"></image>
+        <image src="../../images/shanchu.png" mode="widthFix" bindtap="del" data-index="index"></image>
       </view>
     </view>
   </view>
-  
+
   <view class="down">
     <view class="left">总价:<text>￥0</text></view>
     <view class="right">结算:</view>

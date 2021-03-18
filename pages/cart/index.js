@@ -60,15 +60,44 @@ Page({
     //获取当前点击商品数量
     var num = cartList[index].num
     num++
-     //修改购物车变量数据
-     cartList[index].num = num
-     // console.log(cartList)
-     //修改缓存数据
-     wx.setStorageSync('cartList', cartList)
-     //修改data数据，渲染到页面上
-     this.setData({
-       cartList: cartList
-     })
+    //修改购物车变量数据
+    cartList[index].num = num
+    // console.log(cartList)
+    //修改缓存数据
+    wx.setStorageSync('cartList', cartList)
+    //修改data数据，渲染到页面上
+    this.setData({
+      cartList: cartList
+    })
+  },
+
+  //删除商品
+  del: function (event) {
+    // splice(下标值，删除个数)
+    // var arr=[1,2,3,4,5,6]
+    // var res = arr.splice(3,1)
+    // console.log('arr==>',arr)
+    // console.log('res==>',res)
+
+    //获取下标值
+    var index = event.target.dataset.index
+    //获取缓存数据
+    var cartList = wx.getStorageSync('cartList')
+    var isData = true
+    //删除选中的商品下标值
+    cartList.splice(index, 1)
+    //判断购物车是否有商品,如果没有则隐藏数据页面
+    if(cartList.length==0){
+      isData=false
+    }
+    //修改data数据
+    //渲染界面
+    this.setData({
+      cartList,
+      isData
+    })
+    //修改缓存数据
+    wx.setStorageSync('cartList',cartList)
   },
 
   //到小米商城点击事件

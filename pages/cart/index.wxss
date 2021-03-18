@@ -1,67 +1,83 @@
-page{
+page {
   background-color: #f5f5f5;
 }
-.goods{
+
+.goods {
   margin-bottom: 50px;
 }
+
 /* 购物车有数据 */
-.goodItem{
+.goodItem {
   width: 100%;
   height: 100px;
   background-color: #fff;
-  border-bottom:1px solid #878787
+  border-bottom: 1px solid #878787
 }
-.goodItem checkbox-group{
+
+.goodItem checkbox-group {
   float: left;
   line-height: 100px;
   margin-left: 5px;
 }
-.goodItem>image{
+
+.goodItem>image {
   width: 100px;
   float: left;
   margin: 8px 0;
- 
+
 }
-.goodItem .middle{
+
+.goodItem .middle {
   margin: 5px 0;
   float: left;
 }
-.goodItem .middle>view{
-height: 29px;
+
+.goodItem .middle>view {
+  height: 29px;
 }
-.goodItem .middle .price{
-  color:red;
+
+.goodItem .middle .price {
+  color: red;
 }
-.goodItem .middle .number{
+
+.goodItem .middle .number {
   position: relative;
 }
-.goodItem .middle .number>view{
+
+.goodItem .middle .number>view {
   position: absolute;
   top: 0;
   width: 20px;
   height: 20px;
-  border:1px solid #878787;
-  text-align:center;
+  border: 1px solid #878787;
+  text-align: center;
   line-height: 20px;
 }
-.goodItem .middle .number .num{
+
+.goodItem .middle .number .num {
   width: 40px;
   left: 20px;
 }
-.goodItem .middle .number .add{
+
+.goodItem .middle .number .add {
   width: 20px;
-  left:60px;
+  left: 60px;
 }
-.goodItem .delect{
+
+.goodItem .delect {
   float: right;
-  margin-top:45px;
+  margin-top: 45px;
 }
-.goodItem .delect image{
+
+.goodItem .delect image {
   width: 40px;
 }
 
+/*删除商品  */
+
+
 /* 结算 */
-.down{
+.down {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -70,16 +86,18 @@ height: 29px;
   line-height: 50px;
   background-color: #fff;
 }
-.down .left{
+
+.down .left {
   float: left;
   width: 40%;
-  
+
 }
-.down .right{
+
+.down .right {
   float: right;
   width: 100px;
   text-align: center;
-  color:#fff;
+  color: #fff;
   background-color: red;
 }
 
