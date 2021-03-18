@@ -68,7 +68,7 @@ Page({
         wx.setStorageSync('cartList', cartList)
       }
       //计算商品总数
-      console.log(cartList)
+     // console.log(cartList)
       for(var j=0;j<cartList.length;j++){
         num+=cartList[j].num
       }

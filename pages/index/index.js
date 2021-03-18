@@ -29,7 +29,9 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 1
+            num: 1,
+            check:true
+
           },
           {
             id: 2,
@@ -38,7 +40,8 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 1
+            num: 1,
+            check:true
           },
           {
             id: 3,
@@ -47,7 +50,8 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 1
+            num: 1,
+            check:true
           },
           {
             id: 4,
@@ -56,7 +60,8 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 1
+            num: 1,
+            check:true
           },
           {
             id: 5,
@@ -65,7 +70,8 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 1
+            num: 1,
+            check:true
           },
           {
             id: 6,
@@ -74,7 +80,8 @@ Page({
             desc: "骁龙865/1亿像素",
             price: "3399",
             oldPrice: "￥3999",
-            num: 1
+            num: 1,
+            check:true
           }
         ]
       }
