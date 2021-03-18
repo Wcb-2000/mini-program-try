@@ -22,8 +22,8 @@
             <view class="num" wx:if="{{totalNum !=0}}">{{totalNum}}</view>
         </view>
         <view>
-            <image src="../../images/favorite.png" mode="widthFix" bindtap="collect"></image>
-            <view class="text">收藏</view>
+            <image src="{{collectListImg}}" mode="widthFix" bindtap="collect"></image>
+            <view class="text">{{collectListText}}</view>
         </view>
     </view>
     <view class="right">

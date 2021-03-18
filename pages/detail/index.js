@@ -16,7 +16,11 @@ Page({
       //      num: 0
       //  }
     ],
-    totalNum:0,
+    totalNum: 0,
+
+    //定义收藏图片
+    collectListImg: "../../images/favorite.png",
+    collectListText: "收藏"
 
   },
   //跳转到首页
@@ -31,22 +35,58 @@ Page({
       url: '/pages/cart/index',
     })
   },
-  // 收藏或取消收藏
+  // 收藏或取消收藏 点击事件
   collect: function () {
-    wx.switchTab({
-      url: '/pages/collect/index',
+    var collectList = wx.getStorageSync('collectList')
+    //定义收藏图片和文本
+    var collectListImg = "../../images/favorite.png"
+    var collectListText = "收藏"
+    var isShow = true
+    if (collectList.length == 0) {
+      // 1 收藏夹没有商品，直接收藏
+      wx.setStorageSync('collectList', this.data.detailList)
+      collectListImg = "../../images/favorite1.png"
+      collectListText = "已收藏"
+    } else {
+      // 2 收藏夹中有商品
+      for (var i = 0; i < collectList.length; i++) {
+        // 2.1 商品id相同，显示已收藏图标和文本
+        if (collectList[i].id == this.data.detailList[0].id) {
+          //在收藏夹的缓存数据中删除当前商品
+          collectList.splice(i, 1)
+          wx.setStorageSync('collectList', collectList)
+          collectListImg = "../../images/favorite.png"
+          collectListText = "收藏"
+          isShow = false
+        }
+      }
+
+      // 2.2 商品id不同 收藏商品
+      if (isShow) {
+        collectList.unshift(this.data.detailList[0])
+        wx.setStorageSync('collectList', collectList)
+        collectListImg = "../../images/favorite1.png"
+        collectListText = "已收藏"
+      }
+    }
+    //修改data数据
+    this.setData({
+      collectListImg,
+      collectListText
     })
   },
+
+
   // 加入购物车
   addCart: function () {
     var cartList = wx.getStorageSync('cartList')
-     var num = 0
+    var num = 0
     // console.log(cartList)
     // = 代表赋值 == 代表判断是否相等
     if (cartList.length == 0) {
       // 1 购物车没有商品直接添加
       wx.setStorageSync('cartList', this.data.detailList)
-      num ++
+      num++
     } else {
       // 2 购物车中有商品
       var isTrue = true
@@ -54,7 +94,7 @@ Page({
         //  2.1 商品的id 相同 数量加1
         if (cartList[i].id == this.data.detailList[0].id) {
           // console.log('商品id')
-          cartList[i].num ++
+          cartList[i].num++
           //更新缓存数据
           wx.setStorageSync('cartList', cartList)
           isTrue = false
@@ -68,13 +108,13 @@ Page({
         wx.setStorageSync('cartList', cartList)
       }
       //计算商品总数
-     // console.log(cartList)
-      for(var j=0;j<cartList.length;j++){
-        num+=cartList[j].num
+      // console.log(cartList)
+      for (var j = 0; j < cartList.length; j++) {
+        num += cartList[j].num
       }
     }
     this.setData({
-      totalNum:num
+      totalNum: num
     })
   },
   // 立即购买
@@ -101,17 +141,42 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var detailList = wx.getStorageSync('detailList')
+    //获取购物车缓存数据
     var cartList = wx.getStorageSync('cartList')
+    //获取收藏夹缓存数据
+    var collectList = wx.getStorageSync('collectList')
+    //定义收藏图片和文本
+    var collectListImg = "../../images/favorite.png"
+    var collectListText = "收藏"
     var num = 0
-    if(cartList.length != 0 ){
-      for(var i=0;i<cartList.length;i++){
-        num +=cartList[i].num
+    if (cartList.length != 0) {
+      for (var i = 0; i < cartList.length; i++) {
+        num += cartList[i].num
       }
     }
+    if (collectList.length != 0) {
+      var isShow = true
+      for (var i = 0; i < collectList.length; i++) {
+        console.log(this)
+        if (collectList[i].id == detailList[0].id) {
+          collectListImg = "../../images/favorite1.png"
+          collectListText = "已收藏"
+          isShow = false
+        }
+      }
+      if (isShow) {
+        collectListImg = "../../images/favorite.png"
+        collectListText = "收藏"
+      }
+    }
+
     //获取数据缓存
     this.setData({
-      detailList: wx.getStorageSync('detailList'),
-      totalNum:num
+      detailList,
+      totalNum: num,
+      collectListImg,
+      collectListText
     })
 
   },
