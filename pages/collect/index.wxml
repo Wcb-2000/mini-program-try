@@ -1,2 +1,21 @@
-<!--pages/collect/index.wxml-->
-<text>pages/collect/index.wxml</text>
+<!-- 收藏夹中有数据 -->
+<view wx:if="{{isData}}">
+  <view class="goodItem" wx:for="{{collectList}}" wx:key="*this">
+    <image src="{{item.image}}" mode="widthFix"></image>
+    <view class="middle">
+      <view class="title">{{item.title}}</view>
+      <view class="price">￥{{item.price}}</view>
+    </view>
+    <view class="delect">
+      <image src="../../images/shanchu.png" mode="widthFix" bindtap="del" data-index="{{index}}"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 收藏夹为空 -->
+<view class="null" wx:else>
+  <image src="../../images/shoucang.png" mode="widthFix"></image>
+  <view>收藏夹还是空的</view>
+  <view class="toIndex" bindtap="toIndex">到首页逛逛</view>
+</view>
+<!-- 购物车为空end -->
