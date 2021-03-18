@@ -10,7 +10,7 @@
         <view class="title">{{item.title}}</view>
         <view class="price">￥{{item.price}}</view>
         <view class="number">
-          <view class="redice" bindtap="reduceNum" data-index="{{index}}">-</view>
+          <view class="reduce" bindtap="reduceNum" data-index="{{index}}">-</view>
           <view class="num">{{item.num}}</view>
           <view class="add" bindtap="addNum" data-index="{{index}}">+</view>
         </view>
@@ -22,8 +22,10 @@
   </view>
 
   <view class="down">
-    <view class="left">总价:<text>￥0</text></view>
-    <view class="right">结算:</view>
+
+
+    <view class="left">总价:<text>￥{{totalPrice}}</text></view>
+    <view class="right">结算:<text>￥{{totalPrice}}</text></view>
   </view>
 </view>
 

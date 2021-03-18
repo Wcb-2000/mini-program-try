@@ -92,11 +92,14 @@ page {
   width: 40%;
 
 }
+.down .left text{
+  color: red;
+}
 
 .down .right {
   float: right;
   width: 100px;
-  text-align: center;
+  padding-left: 10px;
   color: #fff;
   background-color: red;
 }

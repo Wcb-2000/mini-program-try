@@ -7,13 +7,14 @@ Page({
   data: {
     //判断购物车中是否有数据
     isData: false,
-    cartList: []
+    cartList: [],
+    totalPrice:0
   },
   //商品选中点击事件
   change: function (event) {
     //获取点击商品的下标值
     var index = event.target.dataset.index
-    console.log(event)
+    // console.log(event)
     //获取购物车的缓存数据
     var cartList = wx.getStorageSync('cartList')
     //获取当前点击后的复选框状态 0-取消选中 1-选中
@@ -25,6 +26,8 @@ Page({
     }
     //修改缓存数据
     wx.setStorageSync('cartList', cartList)
+     //调用总价商品函数
+     this.price()
   },
 
   //商品数量减少
@@ -49,9 +52,11 @@ Page({
     this.setData({
       cartList: cartList
     })
+     //调用总价商品函数
+     this.price()
   },
 
-  //商品数量增加
+  //商品点击数量增加
   addNum: function (event) {
     //获取点击商品的下标值
     var index = event.target.dataset.index
@@ -69,9 +74,11 @@ Page({
     this.setData({
       cartList: cartList
     })
+     //调用总价商品函数
+     this.price()
   },
 
-  //删除商品
+  //点击删除商品
   del: function (event) {
     // splice(下标值，删除个数)
     // var arr=[1,2,3,4,5,6]
@@ -98,6 +105,26 @@ Page({
     })
     //修改缓存数据
     wx.setStorageSync('cartList',cartList)
+     //调用总价商品函数
+     this.price()
+  },
+
+  //结算总价
+  price:function (event) {
+    //获取购物车的缓存数据
+    var cartList = wx.getStorageSync('cartList')
+    var totalPrice = 0
+    for(var i=0;i<cartList.length;i++){
+      //判断商品是否选中
+      if(cartList[i].check){
+        totalPrice += cartList[i].price * cartList[i].num
+      }
+    }
+    //修改data总价参数
+    this.setData({
+      totalPrice
+    })
+
   },
 
   //到小米商城点击事件
@@ -136,6 +163,9 @@ Page({
       isData: isData,
       cartList: cartList
     })
+    
+    //调用总价商品函数
+    this.price()
   },
 
   /**
