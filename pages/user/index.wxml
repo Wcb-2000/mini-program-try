@@ -32,8 +32,10 @@
     <view>我的地址</view>
   </view>
 <view>
+  <navigator url="/pages/collect/index">
     <image src="../../images/shoucang.png" mode="widthFix"></image>
     <view>收藏夹</view>
+  </navigator>
   </view>
 <view>
     <image src="../../images/shezhi.png" mode="widthFix"></image>
