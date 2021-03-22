@@ -10,7 +10,7 @@
             widthFix 让图片的标签宽高 和 图片内容的宽高都等比例发生变化 -->
     <swiper autoplay indicator-dots circular="{{true}}">
         <swiper-item wx:for="{{swiperList}}" wx:key="*this" wx:for-item="swip" wx:for-index="id" class="" item-id="">
-            <image class="" src="{{swip}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <image class="" src="{{swip}}" mode="widthFix" lazy-load="false" ></image>
         </swiper-item>
     </swiper>
 </view>
@@ -23,7 +23,7 @@
 </view>
 <!-- 商品 -->
 <view class="select" wx:for="{{selectList}}">
-    <image src="{{item.titleImg}}" mode="widthFix"></image>
+    <image src="{{item.titleImg}}" mode="widthFix" style=" border-radius: 10rpx"></image>
     <view class="goods">
         <view class="good_item" wx:for="{{item.goodList}}" wx:for-item="good" wx:for-index="id" wx:key="id">
             <image src="{{good.image}}" mode="widthFix"></image>
@@ -37,7 +37,7 @@
             <view class="toPay" bindtap="toDetails" data-id="{{id}}">立即购买</view>
         </view>
     </view>
-    <view class="other" hover-class="none" hover-stop-propagation="false">更多小米商品-></view>
+    <view class="other" >更多系列商品-></view>
     
 </view>
 <!-- 商品结束 -->

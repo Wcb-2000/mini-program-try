@@ -5,9 +5,10 @@ Page({
    */
   data: {
     swiperList: [
-      "../../images/my/swiper1.jpg",
-      "../../images/my/swiper2.jpg",
-      "../../images/my/swiper3.jpg"
+      "../../images/my/swiper1.png",
+      "../../images/my/swiper2.png",
+      "../../images/my/swiper3.png",
+      "../../images/my/swiper4.png"
     ],
     imgHei: "",
     lists: [
@@ -20,66 +21,66 @@ Page({
     selectList: [
       {
         text: "更多小米手机产品",
-        titleImg: "../../images/select.jpg",
+        titleImg: "../../images/my/select.png",
         goodList: [
           {
             id: 1,
-            image: "../../images/select1.jpg",
-            title: "小米10",
-            desc: "骁龙865/1亿像素",
-            price: "3399",
-            oldPrice: "￥3999",
+            image: "../../images/my/select1.jpg",
+            title: "浙江队",
+            desc: "CBA篮球系列比赛服",
+            price: "299",
+            oldPrice: "￥599",
             num: 1,
             check:true
 
           },
           {
             id: 2,
-            image: "../../images/select2.jpg",
-            title: "小米10",
-            desc: "骁龙865/1亿像素",
-            price: "3399",
-            oldPrice: "￥3999",
+            image: "../../images/my/select2.jpg",
+            title: "北京队",
+            desc: "CBA篮球系列比赛服",
+            price: "299",
+            oldPrice: "￥599",
             num: 1,
             check:true
           },
           {
             id: 3,
-            image: "../../images/select3.jpg",
-            title: "小米10",
-            desc: "骁龙865/1亿像素",
-            price: "3399",
-            oldPrice: "￥3999",
+            image: "../../images/my/select3.jpg",
+            title: "山西队",
+            desc: "CBA篮球系列比赛服",
+            price: "299",
+            oldPrice: "￥599",
             num: 1,
             check:true
           },
           {
             id: 4,
-            image: "../../images/select4.jpg",
-            title: "小米10",
-            desc: "骁龙865/1亿像素",
-            price: "3399",
-            oldPrice: "￥3999",
+            image: "../../images/my/select4.jpg",
+            title: "福建队",
+            desc: "CBA篮球系列比赛服",
+            price: "299",
+            oldPrice: "￥599",
             num: 1,
             check:true
           },
           {
             id: 5,
-            image: "../../images/select5.jpg",
-            title: "小米10",
-            desc: "骁龙865/1亿像素",
-            price: "3399",
-            oldPrice: "￥3999",
+            image: "../../images/my/select5.jpg",
+            title: "上海队",
+            desc: "CBA篮球系列比赛服",
+            price: "299",
+            oldPrice: "￥599",
             num: 1,
             check:true
           },
           {
             id: 6,
-            image: "../../images/select6.jpg",
-            title: "小米10",
-            desc: "骁龙865/1亿像素",
-            price: "3399",
-            oldPrice: "￥3999",
+            image: "../../images/my/select6.jpg",
+            title: "广州队",
+            desc: "CBA篮球系列比赛服",
+            price: "299",
+            oldPrice: "￥599",
             num: 1,
             check:true
           }
