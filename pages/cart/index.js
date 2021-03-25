@@ -138,6 +138,34 @@ Page({
       url: '/pages/index/index',
     })
   },
+
+  //结算的点击事件
+  toPay:function(){
+    var settlementList = []
+    //判断购物车中商品是否选中
+    var isCheck = false
+    var cartList=wx.getStorageSync('cartList')
+    for(var i=0;i<cartList.length;i++){
+      if(cartList[i].check){
+      //选中商品
+      settlementList.push(cartList[i])
+      isCheck = true
+      }
+    }
+    wx.setStorageSync('settlementList', settlementList)
+    if(isCheck){
+    wx.navigateTo({
+      url:'/pages/settlement/settlement?id=2'
+    })
+  }else{
+    //消息提示框
+    wx.showToast({
+      title: '请选择商品',
+      icon:'none',
+      duration:2000
+    })
+  }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

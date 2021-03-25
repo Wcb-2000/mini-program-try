@@ -45,6 +45,12 @@
         {
           "name": "pages/collect/index",
           "pathName": "pages/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/settlement/settlement",
+          "pathName": "pages/settlement/settlement",
           "scene": null
         }
       ]

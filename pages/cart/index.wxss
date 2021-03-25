@@ -21,9 +21,9 @@ page {
 }
 
 .goodItem>image {
-  width: 100px;
+  width: 90px;
   float: left;
-  margin: 8px 0;
+  margin: 5px 0;
 
 }
 

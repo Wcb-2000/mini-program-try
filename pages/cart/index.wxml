@@ -25,7 +25,7 @@
 
 
     <view class="left">总价:<text>￥{{totalPrice}}</text></view>
-    <view class="right">结算:<text>￥{{totalPrice}}</text></view>
+    <view class="right" bindtap="toPay">结算:<text>￥{{totalPrice}}</text></view>
   </view>
 </view>
 

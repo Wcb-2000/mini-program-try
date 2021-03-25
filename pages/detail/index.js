@@ -117,11 +117,15 @@ Page({
       totalNum: num
     })
   },
-  // 立即购买
+  // 立即购买点击事件
   topay: function () {
-    wx.switchTab({
-      url: '/pages/collect/index',
+    //将当前数据放到用户结算的缓存数据中
+    wx.setStorageSync('settlementList', this.data.detailList)
+    //页面跳转
+    wx.navigateTo({
+      url:'../settlement/settlement?id=1',
     })
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -158,7 +162,7 @@ Page({
     if (collectList.length != 0) {
       var isShow = true
       for (var i = 0; i < collectList.length; i++) {
-        console.log(this)
+        // console.log(this)
         if (collectList[i].id == detailList[0].id) {
           collectListImg = "../../images/favorite1.png"
           collectListText = "已收藏"

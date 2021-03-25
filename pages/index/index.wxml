@@ -9,7 +9,7 @@
            mode属性渲染
             widthFix 让图片的标签宽高 和 图片内容的宽高都等比例发生变化 -->
     <swiper autoplay indicator-dots circular="{{true}}">
-        <swiper-item wx:for="{{swiperList}}" wx:key="*this" wx:for-item="swip" wx:for-index="id" class="" item-id="">
+        <swiper-item wx:for="{{swiperList}}"  wx:for-item="swip" wx:for-index="id" wx:key="*this">
             <image class="" src="{{swip}}" mode="widthFix" lazy-load="false" ></image>
         </swiper-item>
     </swiper>
@@ -22,7 +22,7 @@
     </view>
 </view>
 <!-- 商品 -->
-<view class="select" wx:for="{{selectList}}">
+<view class="select" wx:for="{{selectList}}" wx:key="*this">
     <image src="{{item.titleImg}}" mode="widthFix" style=" border-radius: 10rpx"></image>
     <view class="goods">
         <view class="good_item" wx:for="{{item.goodList}}" wx:for-item="good" wx:for-index="id" wx:key="id">

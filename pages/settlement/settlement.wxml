@@ -1,0 +1,39 @@
+<!-- 有地址 -->
+<view class="address current parentLevel" wx:if="{{isAddress}}">
+  <view class="left">
+    <view>地区信息</view>
+    <view>详细地址</view>
+    <view>姓名 电话</view>
+  </view>
+  <view class="right">></view>
+</view>
+<!-- 没有地址 -->
+<view class="null current parentLevel" wx:else>
+  <image class="left" src="/images/dizhi.png" mode="widthFix"></image>
+  <view class="left">添加新地址</view>
+  <view class="right">></view>
+</view>
+<!-- 没有地址end -->
+<view class="bg" style="background:url(../../../../images/bg.png)"></view>
+
+<!-- 商品 -->
+<view class="goods">
+  <view class="goodItem current parentLevel" wx:for="{{settlementList}}" wx:key="*this">
+    <image class="left" src="{{item.image}}" mode="widthFix"></image>
+    <view class="middle left">
+      <view class="title">{{item.title}}</view>
+      <view class="desc">{{item.desc}}</view>
+    </view>
+    <view class="right">
+      <view class="price">￥{{item.price}}</view>
+      <view class="num col">×{{item.num}}</view>
+
+    </view>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="down">
+  <view class="left">共{{totalNum}}件，合计：<text>￥{{totalPrice}}</text></view>
+  <view class="right" bindtap="toPay">去付款</view>
+</view>
