@@ -20,26 +20,59 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    //console.log(options)
+    var orderId = wx.getStorageSync('orderId')
+    if(orderId.length == 0){
+      wx.setStorageSync('orderId', 0)
+    }
     this.setData({
-      id:options.id
+      id:options.id,
+      orderId
     })
   },
 
   //去付款的点击事件
   toPay:function(){
-    var that =this//先判断是否有地址
+    var that =this
+    //先判断是否有地址
     if(that.data.isAddress){  
       //有地址
+      //删除购物车中当前的商品 id=2
+      if(that.data.id == 2){
+        // console.log("从购物车中购买商品")
+        var cartList = wx.getStorageSync('cartList')
+        //判断商品是否选中购买
+        for(var i =cartList.length-1;i>=0;i--){
+          if(cartList[i].check){
+            cartList.splice(i,1)
+          }
+        }
+        console.log(cartList)
+        wx.setStorageSync('cartList', cartList)
+      }
+      // console.log(that.data.id)
+      //模态框
       wx.showModal({
         title:'￥'+that.data.totalPrice,
         content:'是否付款？',
         success(res){
           if(res.confirm){
             console.log('用户点击确定')
-            //删除购物车中当前的上哦 id=2
             //将当前数据添加到待收货，全部订单的缓存数据
-          
+            //定义订单号 orderId，每次购买商品都不同
+            var settlementList = wx.getStorageSync('settlementList')
+            var orderId = wx.getStorageSync('orderId')
+            // console.log(orderId)
+            for(var m=0;m<settlementList.length;m++){
+              console.log(settlementList[m])
+              //给每个商品添加订单号和按钮文本[确认收获]
+              orderId++
+              settlementList[m].orderId = orderId
+              settlementList[m].btn='确认收货'
+            }
+            // console.log(that.data.settlementList)
+            // console.log(new Date())
+          wx.setStorageSync('orderId', orderId)
         }else if(res.cancel){
           console.log('用户点击取消')
           //删除购物车中当前的商品 id=2
@@ -49,7 +82,10 @@ Page({
       })
     }else{
       //没有地址
-     
+     wx.showToast({
+       title: '请输入地址',
+       icon:'none'
+     })
     }
   },
   /**
