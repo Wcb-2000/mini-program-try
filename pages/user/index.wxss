@@ -6,7 +6,7 @@
 .userInfo{
   width: 100%;
   height: 400rpx;
-  background-color: #ff6422;
+  background-color: #D73C3C;
   color: #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;

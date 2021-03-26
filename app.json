@@ -12,14 +12,17 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "CBA概念店",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#000000"
+
   },
   "tabBar": {
-    "color": "#brake",
-    "selectedColor": "#ff2d4a",
-    "backgroundColor": "#aaaaaa",
+    "color": "#BFD7BD",
+    "selectedColor": "#D75846",
+    "backgroundColor": "#000000",
     "position": "bottom",
     "borderStyle": "black",
     "list": [

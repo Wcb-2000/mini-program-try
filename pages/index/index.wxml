@@ -23,7 +23,7 @@
 </view>
 <!-- 商品 -->
 <view class="select" wx:for="{{selectList}}" wx:key="*this">
-    <image src="{{item.titleImg}}" mode="widthFix" style=" border-radius: 10rpx"></image>
+    <image class="start" src="{{item.titleImg}}" mode="widthFix" style=" border-radius: 10rpx"></image>
     <view class="goods">
         <view class="good_item" wx:for="{{item.goodList}}" wx:for-item="good" wx:for-index="id" wx:key="id">
             <image src="{{good.image}}" mode="widthFix"></image>

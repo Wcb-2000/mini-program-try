@@ -31,6 +31,7 @@ page{
 
 /* 底部 */
 .down{
+  border-top: 1px solid gray;
   width: 100%;
   height: 50px;
   position: fixed;
@@ -38,6 +39,7 @@ page{
   bottom: 0;
 }
 .down .left{
+  padding: 6.9px 0;
   float: left;
   width: 40%;
   text-align: center;

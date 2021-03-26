@@ -71,7 +71,7 @@ Page({
             console.log('用户点击取消')
             //将当前数据添加到待付款，全部订单的缓存数据中
             var orderId = wx.getStorageSync('orderId')
-            var parment = wx.getStorageSync('paymentList')
+            var payment = wx.getStorageSync('paymentList')
             var allOrder = wx.getStorageSync('allOrderList')
             that.order('paymentList', payment, orderId, '去付款')
             that.order('allOrderList', allOrder, orderId, '去付款')
