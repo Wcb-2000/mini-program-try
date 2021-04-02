@@ -37,7 +37,6 @@
             <view class="toPay" bindtap="toDetails" data-id="{{id}}">立即购买</view>
         </view>
     </view>
-    <view class="other" >更多系列商品-></view>
-    
 </view>
 <!-- 商品结束 -->
+<view class="other" >更多系列商品-></view>

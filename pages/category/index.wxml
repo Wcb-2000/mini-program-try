@@ -10,9 +10,9 @@
 
   <!-- 右边内容 -->
   <scroll-view class="right" scroll-y="true" style="height:{{height}}px;" scroll-into-view="scroll-{{navIndex}}"
-    scroll-with-animation="true" bindscroll="rigthScroll">
+    scroll-with-animation="true" bindscroll="rigthScroll" >
     <view class="rightContent" wx:for="{{list}}" wx:key="*this" id="scroll-{{index}}">
-      <view class="title">{{item.leftlist}}</view>
+      <view class="title">/ {{item.leftlist}} /</view>
       <view class="good" wx:for="{{item.rightlist}}" wx:key="*this" wx:for-item="good">
         <image src="{{good.image}}" mode="widthFix"></image>
         <view class="text">{{good.title}}</view>

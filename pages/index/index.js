@@ -155,7 +155,12 @@ Page({
   ]
   },
  
-   
+   //点击更多系列商品跳转页面
+   toCategory:function(event){
+    wx.navigateTo({
+      url: '/pages/category/index',
+    })
+   },
 
   //点击跳转详情页
   toDetails: function (event) {

@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    left: ['小米手机', 'Redmi手机', '电视', '大家电', '电脑办公', '小爱音响', '路由器', '生活电器', '厨房电器', '智能穿戴', '智能家居', '智能家居', '智能家居', '智能家居'],
+    left: ['潮品尖货', '男鞋', '女鞋', '男装', '女装', '男童鞋', '女童鞋', '男童装', '女童装', '配件', '运动装备', '羽毛球', '乒乓球', '团购服务'],
     list: [{
-      leftlist: '小米手机',
+      leftlist: '潮品尖货',
       rightlist: [{
           image: "../../images/select1.jpg",
           title: "小米10"
@@ -35,7 +35,7 @@ Page({
       ]    
     },
     {
-      leftlist: 'Redmi手机',
+      leftlist: '男鞋',
       rightlist: [{
           image: "../../images/select1.jpg",
           title: "小米10"
@@ -63,7 +63,315 @@ Page({
       ]    
     },
     {
-      leftlist: '电视',
+      leftlist: '女鞋',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '男装',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '女装',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '男童鞋',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '女童鞋',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '男童装',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '女童装',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '配件',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '运动装备',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '羽毛球',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '乒乓球',
+      rightlist: [{
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        },
+        {
+          image: "../../images/select1.jpg",
+          title: "小米10"
+        }
+      ]    
+    },
+    {
+      leftlist: '团购服务',
       rightlist: [{
           image: "../../images/select1.jpg",
           title: "小米10"
