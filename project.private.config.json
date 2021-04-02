@@ -51,6 +51,18 @@
         {
           "name": "pages/settlement/settlement",
           "pathName": "pages/settlement/settlement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/category/index",
+          "pathName": "pages/category/index",
           "scene": null
         }
       ]

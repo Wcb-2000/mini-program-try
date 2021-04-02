@@ -2,6 +2,7 @@
   "pages":[
     "pages/settlement/settlement",
     "pages/index/index",
+    "pages/order/order",
     "pages/collect/index",
     "pages/detail/index",
     "pages/request/index",
