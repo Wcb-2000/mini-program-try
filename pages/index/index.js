@@ -18,12 +18,10 @@ Page({
       "../../images/my/list4.png",
     ],
     //定义商品数据
-    selectList: [
-      {
+    selectList: [{
         text: "更多小米手机产品",
         titleImg: "../../images/my/select.png",
-        goodList: [
-          {
+        goodList: [{
             id: 1,
             image: "../../images/my/select1.jpg",
             title: "浙江队",
@@ -31,7 +29,7 @@ Page({
             price: "299",
             oldPrice: "￥599",
             num: 1,
-            check:true
+            check: true
 
           },
           {
@@ -42,7 +40,7 @@ Page({
             price: "299",
             oldPrice: "￥599",
             num: 1,
-            check:true
+            check: true
           },
           {
             id: 3,
@@ -52,7 +50,7 @@ Page({
             price: "299",
             oldPrice: "￥599",
             num: 1,
-            check:true
+            check: true
           },
           {
             id: 4,
@@ -62,7 +60,7 @@ Page({
             price: "299",
             oldPrice: "￥599",
             num: 1,
-            check:true
+            check: true
           },
           {
             id: 5,
@@ -72,7 +70,7 @@ Page({
             price: "299",
             oldPrice: "￥599",
             num: 1,
-            check:true
+            check: true
           },
           {
             id: 6,
@@ -82,14 +80,85 @@ Page({
             price: "299",
             oldPrice: "￥599",
             num: 1,
-            check:true
+            check: true
           }
         ]
-      }
-    ]
+      },
+
+    ],
+    indexList: [{
+      text: "更多小米手机产品",
+      titleImg: "../../images/my/select.png",
+      goodList: [{
+          id: 7,
+          image: "../../images/my/select1.jpg",
+          title: "浙江队",
+          desc: "CBA篮球系列比赛服",
+          price: "299",
+          oldPrice: "￥599",
+          num: 1,
+          check: true
+
+        },
+        {
+          id: 8,
+          image: "../../images/my/select2.jpg",
+          title: "北京队",
+          desc: "CBA篮球系列比赛服",
+          price: "299",
+          oldPrice: "￥599",
+          num: 1,
+          check: true
+        },
+        {
+          id: 9,
+          image: "../../images/my/select3.jpg",
+          title: "山西队",
+          desc: "CBA篮球系列比赛服",
+          price: "299",
+          oldPrice: "￥599",
+          num: 1,
+          check: true
+        },
+        {
+          id: 10,
+          image: "../../images/my/select4.jpg",
+          title: "福建队",
+          desc: "CBA篮球系列比赛服",
+          price: "299",
+          oldPrice: "￥599",
+          num: 1,
+          check: true
+        },
+        {
+          id: 11,
+          image: "../../images/my/select5.jpg",
+          title: "上海队",
+          desc: "CBA篮球系列比赛服",
+          price: "299",
+          oldPrice: "￥599",
+          num: 1,
+          check: true
+        },
+        {
+          id: 12,
+          image: "../../images/my/select6.jpg",
+          title: "广州队",
+          desc: "CBA篮球系列比赛服",
+          price: "299",
+          oldPrice: "￥599",
+          num: 1,
+          check: true
+        }
+      ]
+    }
+  ]
   },
+ 
+   
+
   //点击跳转详情页
-  toDetails:function(event){
+  toDetails: function (event) {
     //获取当前数据下标值
     var id = event.target.dataset.id
     //获取当前商品数组
@@ -108,24 +177,24 @@ Page({
    */
   onLoad: function (options) {
     //同步版本
-// wx.setStorageSync      修改缓存数据（有则修改、无则添加）
+    // wx.setStorageSync      修改缓存数据（有则修改、无则添加）
     // wx.setStorageSync('list', 111111)
-// wx.removeStorageSync   删除缓存数据
-   // wx.removeStorageSync('list')
-// wx.getStorageInfoSync  获取缓存数据信息
+    // wx.removeStorageSync   删除缓存数据
+    // wx.removeStorageSync('list')
+    // wx.getStorageInfoSync  获取缓存数据信息
     // var info = wx.getStorageInfoSync()
     // console.log(info)
-// wx.getStorageSync      获取缓存数据
-//  var data = wx.getStorageSync('list')
-//  console.log(data)
-// wx.clearStorageSync    清空缓存数据
+    // wx.getStorageSync      获取缓存数据
+    //  var data = wx.getStorageSync('list')
+    //  console.log(data)
+    // wx.clearStorageSync    清空缓存数据
 
-// 异步版本
-// wx.setStorage 
-// wx.removeStorage
-// wx.getStorageInfo
-// wx.getStorage
-// wx.clearStorage
+    // 异步版本
+    // wx.setStorage 
+    // wx.removeStorage
+    // wx.getStorageInfo
+    // wx.getStorage
+    // wx.clearStorage
 
     // imgH:function(event){
     //   var imgWid = event.detail.width
