@@ -27,8 +27,6 @@
   margin-bottom: 50px;
 }
 
-
-
 .rightContent:after{
   content:"";
   display: block;
@@ -38,8 +36,12 @@
   width: 33.33%;
   float: left;
   text-align: center;
-  margin:20px 0;
+  margin:10px 0;
 }
 .rightContent .good  image{
   width: 80%;
+}
+.right .rightContent .text{
+  font-size: 13px;
+  height: 32px;
 }

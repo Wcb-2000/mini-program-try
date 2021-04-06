@@ -1,5 +1,5 @@
-<view class="btn" wx:if="{{canIUse}}" >
-<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view class="btn" wx:if="{{canIUse}}">
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
 </view>
 <!-- 用户信息 -->
 <view class="userInfo" wx:else>
@@ -24,13 +24,13 @@
     <image src="../../images/dizhi.png" mode="widthFix"></image>
     <view>我的地址</view>
   </view>
-<view>
-  <navigator url="/pages/collect/index">
-    <image src="../../images/shoucang.png" mode="widthFix"></image>
-    <view>收藏夹</view>
-  </navigator>
+  <view>
+    <navigator url="/pages/collect/index">
+      <image src="../../images/shoucang.png" mode="widthFix"></image>
+      <view>收藏夹</view>
+    </navigator>
   </view>
-<view>
+  <view>
     <image src="../../images/shezhi.png" mode="widthFix"></image>
     <view>设置</view>
   </view>
@@ -40,4 +40,3 @@
 <!-- <open-data type="userAvatarUrl"></open-data>
 <open-data type="userNickName"></open-data> -->
 <!-- 需要使用 button 来授权登录 -->
-
