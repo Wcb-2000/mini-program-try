@@ -28,17 +28,9 @@ Page({
      ]
   },
 
-  // 点击跳转到订单页面
-  toOrder:function(event){
-     var index = event.target.dataset.index
-     wx.navigateTo({
-       url: '/pages/order/order?index='+index,
-     })
-  },
-
   // 授权登录的点击事件
   bindGetUserInfo(e) {
-     console.log(e.detail.userInfo)
+   //   console.log(e)
      var nickName = e.detail.userInfo.nickName
      var userUrl = e.detail.userInfo.avatarUrl
      // 修改data里面的数据
@@ -49,12 +41,26 @@ Page({
      })
   },
 
+  // 点击跳转到订单页面
+  toOrder:function(event){
+   var index = event.target.dataset.index
+   wx.navigateTo({
+     url: '/pages/order/order?index='+index,
+   })
+},
 
+  // 点击跳转到我的地址界面
+  toMyLocation:function(event){
+   wx.navigateTo({
+     url: '/pages/location/location',
+   })
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
      var _this = this
+   //   console.log(this)
      // 查看是否授权
      wx.getSetting({
         success(res) {
@@ -62,6 +68,7 @@ Page({
               // 已经授权，可以直接调用 getUserInfo 获取头像昵称
               wx.getUserInfo({
                  success: function (res) {
+                     // console.log(res.userInfo)
                     var nickName = res.userInfo.nickName
                     var userUrl = res.userInfo.avatarUrl
                     // 修改data里面的数据
@@ -87,7 +94,9 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+     
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

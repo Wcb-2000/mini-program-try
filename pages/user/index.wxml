@@ -21,7 +21,7 @@
 <!-- 我的服务 -->
 <view class="server current">
   <view>
-    <image src="../../images/dizhi.png" mode="widthFix"></image>
+    <image src="../../images/dizhi.png" mode="widthFix" bindtap="toMyLocation"></image>
     <view>我的地址</view>
   </view>
   <view>
