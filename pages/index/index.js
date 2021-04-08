@@ -85,74 +85,7 @@ Page({
         ]
       },
 
-    ],
-    indexList: [{
-      text: "更多小米手机产品",
-      titleImg: "../../images/my/select.png",
-      goodList: [{
-          id: 7,
-          image: "../../images/my/select1.jpg",
-          title: "浙江队",
-          desc: "CBA篮球系列比赛服",
-          price: "299",
-          oldPrice: "￥599",
-          num: 1,
-          check: true
-
-        },
-        {
-          id: 8,
-          image: "../../images/my/select2.jpg",
-          title: "北京队",
-          desc: "CBA篮球系列比赛服",
-          price: "299",
-          oldPrice: "￥599",
-          num: 1,
-          check: true
-        },
-        {
-          id: 9,
-          image: "../../images/my/select3.jpg",
-          title: "山西队",
-          desc: "CBA篮球系列比赛服",
-          price: "299",
-          oldPrice: "￥599",
-          num: 1,
-          check: true
-        },
-        {
-          id: 10,
-          image: "../../images/my/select4.jpg",
-          title: "福建队",
-          desc: "CBA篮球系列比赛服",
-          price: "299",
-          oldPrice: "￥599",
-          num: 1,
-          check: true
-        },
-        {
-          id: 11,
-          image: "../../images/my/select5.jpg",
-          title: "上海队",
-          desc: "CBA篮球系列比赛服",
-          price: "299",
-          oldPrice: "￥599",
-          num: 1,
-          check: true
-        },
-        {
-          id: 12,
-          image: "../../images/my/select6.jpg",
-          title: "广州队",
-          desc: "CBA篮球系列比赛服",
-          price: "299",
-          oldPrice: "￥599",
-          num: 1,
-          check: true
-        }
-      ]
-    }
-  ]
+    ]
   },
  
    //点击更多系列商品跳转页面

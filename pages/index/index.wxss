@@ -52,6 +52,12 @@ page{
 }
 .good_item .desc{
     color:black;
+    /* 超出隐藏 */
+    overflow: hidden;
+    /* 强制文本不换行 */
+    white-space: nowrap;
+    /* 超出部分省略号 */
+    text-overflow: ellipsis;
 }
 .good_item .price{
     color: red;

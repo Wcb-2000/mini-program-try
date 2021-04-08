@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/settlement/settlement",
+    "pages/addlocation/addlocation",
+    "pages/location/location",
     "pages/index/index",
     "pages/order/order",
     "pages/collect/index",

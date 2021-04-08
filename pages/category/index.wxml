@@ -9,7 +9,7 @@
   <!-- 左边导航end -->
 
   <!-- 右边内容 -->
-  <scroll-view class="right" scroll-y="true" style="height:{{height}}px;" scroll-into-view="scroll-{{navIndex}}"
+  <scroll-view class="right" scroll-y="true" style="height:{{height}}px;" scroll-into-view="scroll-{{contentIndex}}"
     scroll-with-animation="true" bindscroll="rightScroll">
     <view class="rightContent" wx:for="{{list}}" wx:key="*this" id="scroll-{{index}}">
       <view class="title">/ {{item.leftlist}} /</view>

@@ -435,9 +435,12 @@ Page({
     height: 0,
     //导航栏下标值
     navIndex: 0,
-    //左侧导航距离顶部的距离
-    scrollTopList: 0,
-    contentIndex: 0
+    // //左侧导航距离顶部的距离
+    // scrollTopList: 0,
+    //右侧内容对应的下标值
+    contentIndex: 0,
+    //左边导航距离顶部位置
+    leftScrollTop:0
 
 
   },
@@ -446,42 +449,50 @@ Page({
   leftNavIndex: function (event) {
     var index = event.target.dataset.index
     this.setData({
-      navIndex: index
-      // leftScrollTop: -50 * (index + 1)
+      navIndex: index,
+      contentIndex:index,
+      leftScrollTop: 50 * (index - 4)
     })
   },
 
   //右边滚动事件
   rightScroll: function (event) {
-    //右边整体内容距离顶部的高度
+    //右边整体内容距离顶部的高度，初始化高度
     var hei = 0
     //获取右边商品数据
     var list = this.data.list
     for (let i = 0; i < list.length; i++) {
-      //获取id为#scroll-的节点元素
+      //获取id为#scroll-的节点元素,节点信息
       wx.createSelectorQuery().select('#scroll-' + i).fields({
+        //获取节点的尺寸（宽、高）
           size: true
         },
         function (res) {
+          // console.log(res.height)
           //将右边每个模块距离顶部的位移作为属性定义到右边数组中
           list[i].top = hei
+          //将当前元素的高度和距离顶的位置相加
+          //强制转换去掉浮点数
           hei += parseInt(res.height + 50)
+          //元素底部距离顶部的高度
           list[i].bottom = hei
-          // console.log(res.height)
+          // console.log(hei)
         }).exec()
     }
-    console.log(list)
-
+    // console.log(list)
     //修改data的数据
     this.setData({
       list
     })
     var scrollTop = event.detail.scrollTop
     // console.log(event.detail)
+    //循环遍历右边商品的数组
     for (let i = 0; i < list.length; i++) {
+      //判断滚动的范围
       if (scrollTop >= list[i].top && scrollTop < list[i].bottom) {
         this.setData({
           navIndex: i,
+          leftScrollTop: 50 * (i - 4)
         })
       }
     }

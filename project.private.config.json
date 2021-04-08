@@ -63,6 +63,12 @@
         {
           "name": "pages/category/index",
           "pathName": "pages/category/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/location/location",
+          "pathName": "pages/location/location",
           "scene": null
         }
       ]
