@@ -7,82 +7,102 @@
 <!-- 导航end -->
 
 <!-- 内容 -->
+
 <swiper current="{{navIndex}}" bindchange="getcontentIndex" style="height:{{height-61}}px;">
   <swiper-item>
     <scroll-view style="height:{{height-61}}px;" scroll-y="true">
-      <view class="good" wx:for="{{allorderList}}" wx:key="*this">
-        <view class="goodItem current">
-          <view class="up parentLevel">
-            <image class="left" src="{{item.image}}"></image>
-            <view class="middle left">
-              <view class="title">{{item.title}}</view>
-              <view class="desc">{{item.desc}}</view>
-              <view class="text">七天无理由退换</view>
+      <view wx:if="{{isData}}">
+        <view class="good" wx:for="{{allorderList}}" wx:key="*this">
+          <view class="goodItem current">
+            <view class="up parentLevel">
+              <image class="left" src="{{item.image}}"></image>
+              <view class="middle left">
+                <view class="title">{{item.title}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="text">七天无理由退换</view>
+              </view>
+              <view class="right">
+                <view class="price">￥{{item.price}}</view>
+                <view class="num col">×{{item.num}}</view>
+              </view>
             </view>
-            <view class="right">
-              <view class="price">￥{{item.price}}</view>
-              <view class="num col">×{{item.num}}</view>
+            <view class="totalPrice"><text>总价:￥{{item.price * item.num}}</text> 需付款:￥{{item.price * item.num}}
             </view>
-          </view>
-          <view class="totalPrice"><text>总价:￥{{item.price * item.num}}</text> 需付款:￥{{item.price * item.num}}
-          </view>
-          <view class="down parentLevel">
-            <view class="btn right">{{item.btn}}</view>
+            <view class="down parentLevel">
+              <button class="btn right" bindtap="payment">{{item.btn}}</button>
+            </view>
           </view>
         </view>
+      </view>
+      <view class="null" wx:else>
+        <image src="../../images/shoppingCar.png" mode="widthFix"></image>
+        <view>暂时还没有订单</view>
+        <view class="toIndex" bindtap="toIndex">到首页逛逛</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
 
+  <swiper-item>
+    <scroll-view style="height:{{height-61}}px;" scroll-y="true">
+      <view wx:if="{{isDataa}}">
+        <view class="good" wx:for="{{paymentList}}" wx:key="*this">
+          <view class="goodItem current">
+            <view class="up parentLevel">
+              <image class="left" src="{{item.image}}"></image>
+              <view class="middle left">
+                <view class="title">{{item.title}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="text">七天无理由退换</view>
+              </view>
+              <view class="right">
+                <view class="price">￥{{item.price}}</view>
+                <view class="num col">×{{item.num}}</view>
+              </view>
+            </view>
+            <view class="totalPrice"><text>总价:￥{{item.price * item.num}}</text> 需付款:￥{{item.price * item.num}}
+            </view>
+            <view class="down parentLevel">
+              <button class="btn right" bindtap="payment">{{item.btn}}</button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="null" wx:else>
+        <image src="../../images/shoppingCar.png" mode="widthFix"></image>
+        <view>暂时还没有订单</view>
+        <view class="toIndex" bindtap="toIndex">到首页逛逛</view>
       </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
     <scroll-view style="height:{{height-61}}px;" scroll-y="true">
-      <view class="good" wx:for="{{paymentList}}" wx:key="*this">
-        <view class="goodItem current">
-          <view class="up parentLevel">
-            <image class="left" src="{{item.image}}"></image>
-            <view class="middle left">
-              <view class="title">{{item.title}}</view>
-              <view class="desc">{{item.desc}}</view>
-              <view class="text">七天无理由退换</view>
+      <view wx:if="{{isDataaa}}">
+        <view class="good" wx:for="{{receivedList}}" wx:key="*this">
+          <view class="goodItem current">
+            <view class="up parentLevel">
+              <image class="left" src="{{item.image}}"></image>
+              <view class="middle left">
+                <view class="title">{{item.title}}</view>
+                <view class="desc">{{item.desc}}</view>
+                <view class="text">七天无理由退换</view>
+              </view>
+              <view class="right">
+                <view class="price">￥{{item.price}}</view>
+                <view class="num col">×{{item.num}}</view>
+              </view>
             </view>
-            <view class="right">
-              <view class="price">￥{{item.price}}</view>
-              <view class="num col">×{{item.num}}</view>
+            <view class="totalPrice"><text>总价:￥{{item.price * item.num}}</text> 需付款:￥{{item.price * item.num}}
             </view>
-          </view>
-          <view class="totalPrice"><text>总价:￥{{item.price * item.num}}</text> 需付款:￥{{item.price * item.num}}
-          </view>
-          <view class="down parentLevel">
-            <view class="btn right">{{item.btn}}</view>
+            <view class="down parentLevel">
+              <button class="btn right" bindtap="received">{{item.btn}}</button>
+            </view>
           </view>
         </view>
-
       </view>
-    </scroll-view>
-  </swiper-item>
-  <swiper-item>
-    <scroll-view style="height:{{height-61}}px;" scroll-y="true">
-      <view class="good" wx:for="{{receivedList}}" wx:key="*this">
-        <view class="goodItem current">
-          <view class="up parentLevel">
-            <image class="left" src="{{item.image}}"></image>
-            <view class="middle left">
-              <view class="title">{{item.title}}</view>
-              <view class="desc">{{item.desc}}</view>
-              <view class="text">七天无理由退换</view>
-            </view>
-            <view class="right">
-              <view class="price">￥{{item.price}}</view>
-              <view class="num col">×{{item.num}}</view>
-            </view>
-          </view>
-          <view class="totalPrice"><text>总价:￥{{item.price * item.num}}</text> 需付款:￥{{item.price * item.num}}
-          </view>
-          <view class="down parentLevel">
-            <view class="btn right">{{item.btn}}</view>
-          </view>
-        </view>
-
+      <view class="null" wx:else>
+        <image src="../../images/shoppingCar.png" mode="widthFix"></image>
+        <view>暂时还没有订单</view>
+        <view class="toIndex" bindtap="toIndex">到首页逛逛</view>
       </view>
     </scroll-view>
   </swiper-item>

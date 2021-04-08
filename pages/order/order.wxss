@@ -64,6 +64,7 @@ swiper{
   background: #fdf0d4;
   color: #ff6422;
   line-height: 20px;
+  width: 88px;
   border-radius: 10px;
 }
 .goodItem .totalPrice{
@@ -78,4 +79,23 @@ swiper{
   border:1px solid #ff6422;
   padding:5px 15px;
   border-radius: 50px;
+}
+
+/* 购物车为空 */
+.null {
+  text-align: center;
+  font-size: 48rpx;
+}
+
+.null image {
+  width: 50%;
+  margin: 60rpx;
+}
+
+.null .toIndex {
+  color: #fff;
+  margin: 50rpx auto;
+  background-color: #eb4450;
+  width: 70%;
+  padding: 20rpx 0;
 }
