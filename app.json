@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/settlement/settlement",
-    "pages/addlocation/addlocation",
-    "pages/location/location",
     "pages/index/index",
+    "pages/modifyAddress/modifyAddress",
+    "pages/address/address",
     "pages/order/order",
     "pages/collect/index",
     "pages/detail/index",

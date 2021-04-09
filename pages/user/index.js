@@ -50,9 +50,9 @@ Page({
 },
 
   // 点击跳转到我的地址界面
-  toMyLocation:function(event){
+  toMyLocation:function(){
    wx.navigateTo({
-     url: '/pages/location/location',
+     url: '/pages/address/address',
    })
 },
   /**
