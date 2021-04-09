@@ -1,11 +1,45 @@
 <!-- 有地址 -->
 <view class="address current parentLevel" wx:if="{{isAddress}}">
   <view class="left">
-    <view>地区信息</view>
+    <!-- <view>地区信息</view>
     <view>详细地址</view>
-    <view>姓名 电话</view>
+    <view>姓名 电话</view> -->
+    <!--userinfos不能为空-->
+    <block wx:if="{{userinfos!=null&&userinfos.length>0}}">
+      <block wx:for="{{userinfos}}" wx:key="index" wx:for-item="userinfo">
+        <block wx:if="{{userinfo!=''&&userinfo!=empty}}">
+          <!--单选组-->
+          <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <van-cell use-label-slot center clickable class="styleColor">
+              <!--地址标题-->
+              <view slot="title" class="textLeft">
+                <!--名字-->
+                <text>{{userinfo.username}}</text>
+                <!--手机号-->
+                <text style="margin:0 10px">{{userinfo.phone}}</text>
+                <block wx:if="{{index==0}}">
+                  <van-tag color="#eb4450" round>默认</van-tag>
+                </block>
+              </view>
+
+              <!--中间内容-->
+              <view slot="label" class="textLeft">
+                地址:{{userinfo.address}}{{userinfo.realAddress}}
+              </view>
+
+              <van-radio slot="icon" name="{{index+1}}" checked-color="#eb4450" />
+
+              <!--编辑-->
+              <van-icon slot="right-icon" data-id="{{index}}" bindtap="modifyAddress" name="edit" class="custom-icon" />
+
+              <view class="right" bindtap="toaddress">></view>
+            </van-cell>
+          </van-radio-group>
+        </block>
+      </block>
+    </block>
   </view>
-  <view class="right">></view>
+ 
 </view>
 <!-- 没有地址 -->
 <view class="null current parentLevel" wx:else>

@@ -23,7 +23,7 @@ page{
 .bg{
   width: 90%;
   height: 6px;
-  margin:-8px auto 0;
+  margin:35px  0;
   padding: 0 10px;
 }
 .col{

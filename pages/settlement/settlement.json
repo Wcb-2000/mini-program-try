@@ -1,5 +1,13 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-radio": "/dist/radio/index",
+    "van-radio-group": "/dist/radio-group/index",
+    "van-cell": "/dist/cell/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-tag": "/dist/tag/index",
+    "van-icon":"/dist/icon/index",
+    "van-button": "/dist/button/index"
+  },
   "navigationBarTitleText": "用户结算",
   "backgroundTextStyle":"light",
   "navigationBarBackgroundColor": "#eb4450",

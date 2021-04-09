@@ -14,7 +14,46 @@ Page({
      totalPrice: 0,
      // 判断购买商品的状态  1代表详情页  2代表购物车
      id: 1,
+     userinfos: [{
+      id: 1,
+      username: "张三",
+      phone: "020-88888888",
+      address: "广东省东莞市麻涌镇",
+      realAddress: "沿江西一路7号中山大学新华学院",
+      status: true
+     }
+     //,
+    // {
+    //   id: 2,
+    //   username: "李四",
+    //   phone: "12345671212",
+    //   address: "某某省某某市某某县",
+    //   realAddress: "某某地区",
+    //   status: false
+    // }
+  ],
+    radio: 1
   },
+
+  //跳转至地址编辑页面
+  modifyAddress: function (event) {
+
+   var id = event.target.dataset.id;
+
+   var userinfoStr = this.data.userinfos[id];
+
+   var userinfo = JSON.stringify(userinfoStr);
+
+   wx.navigateTo({
+     url: '../modifyAddress/modifyAddress?status=modify&userinfo=' + userinfo,
+   })
+ },
+//选择地址 跳转到地址
+ toaddress:function(){
+   wx.navigateTo({
+      url: '/pages/address/address'
+    })
+ },
 
   // 去付款的点击事件
   toPay: function () {
